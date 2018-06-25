@@ -20,16 +20,16 @@ import service.ClientServiceImpl;
  * l'identifiant placé entre le dernier '/' et '.html' (ex:
  * /mon-appli/ma-super-page.html).
  */
-public class ViewsServlet extends HttpServlet {
+public class ViewsServlet extends AutowiredServlet {
 	private static final Logger LOGGER = LoggerFactory
 			.getLogger(ViewsServlet.class);
 	private static final long serialVersionUID = 1L;
 
 	private ClientService service;
 
-	public ViewsServlet() {
-		this.service = new ClientServiceImpl();
-	}
+//	public ViewsServlet() {
+//		this.service = new ClientServiceImpl();
+//	}
 
 	@Override
 	protected void doGet(HttpServletRequest request,
