@@ -2,14 +2,17 @@ package presentation;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import model.Client;
-import service.ClientService;
 import service.ClientServiceImpl;
 
 public class Vue {
 
 	//impl�mentation de Client Service
-	private ClientService service = new ClientServiceImpl();
+	
+	@Autowired
+	private ClientServiceImpl service;
 	
 	public void showClient(int id) {
 
